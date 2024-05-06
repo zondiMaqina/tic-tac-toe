@@ -13,7 +13,10 @@ the structure of game looks like this below:
 The first player to draw their *representitive letter* (X/O) diagonally, horizontally in any directon 3 times in a row wins
 
 ## Development 
-
 **I will create the same logic of a game using _Object Oriented Programming_**
+
+## Structure 
+- There will be a `Class` for controlling amount of players and their moves => Players
+- There will be a `Class` for controlling the loop of the game => Game
 
 ## Challenges and Solutions
