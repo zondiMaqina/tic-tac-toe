@@ -8,4 +8,4 @@ This is a simple game of TicTacToe where two players play against each other wil
 
 the structure of game looks like this below:
 
-[demonstration of gameboard](https://github.com/zondiMaqina/tic-tac-toe/blob/e237fabacc6bdaf0696c19dfb37dd9a3a272abc5/images/tic-tac-toe.png)
+<img src="./images/tic-tac-toe.png" alt="display of image">
