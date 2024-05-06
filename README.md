@@ -9,3 +9,11 @@ This is a simple game of TicTacToe where two players play against each other wil
 the structure of game looks like this below:
 
 <img src="./images/tic-tac-toe.png" alt="display of image" width="200px" height="200px">
+
+The first player to draw their *representitive letter* (X/O) diagonally, horizontally in any directon 3 times in a row wins
+
+## Development 
+
+**I will create the same logic of a game using _Object Oriented Programming_**
+
+## Challenges and Solutions
