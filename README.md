@@ -14,6 +14,7 @@ The first player to draw their *representitive letter* (X/O) diagonally, horizon
 
 ## Development 
 **I will create the same logic of a game using _Object Oriented Programming_**
+The program must support `Encapsulation`
 
 ## Structure 
 - There will be a `Class` for controlling amount of players and their moves => Players
