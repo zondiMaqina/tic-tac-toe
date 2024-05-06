@@ -14,10 +14,23 @@ The first player to draw their *representitive letter* (X/O) diagonally, horizon
 
 ## Development 
 **I will create the same logic of a game using _Object Oriented Programming_**
-The program must support `Encapsulation`
+The program must support `Encapsulation` and `Exception Handling`
 
 ## Structure 
 - There will be a `Class` for controlling amount of players and their moves => Players
 - There will be a `Class` for controlling the loop of the game => Game
 
 ## Challenges and Solutions
+I had trouble using the `loop` to control user input 
+
+i first put the user input outside the loop but then i realised it makes more sense when its inside
+
+```
+move = String.new
+
+until move == 'X' of move == 'O'
+    ...
+end
+```
+
+The code will run till player puts in `X` or `O`
