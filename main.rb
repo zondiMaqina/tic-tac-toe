@@ -4,7 +4,7 @@ class Players # class for orfanising plyers
   end
 end
 
-class Game # class for playing game
+class Game < Players # class for playing game
   def initialize
     
   end
