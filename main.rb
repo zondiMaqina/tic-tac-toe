@@ -74,6 +74,66 @@ class Game < Players
     puts " #{@position[6]} | #{@position[7]} | #{@position[8]}"
     puts '---------------------'
   end
+
+  def play_rounds
+
+    while true
+      puts "#{@@players[0].upcase} choose position to play [0 - 8]"
+      player_one_move = gets.chomp
+
+      if @position.index('X') != player_one_move.to_i && @position.index('O') != player_one_move.to_i
+        @position[player_one_move.to_i] = @@player_moves[0]
+        show_board
+      else
+        puts "invalid input...bad luck loser"
+      end
+
+      puts "#{@@players[1].upcase} choose position to play [0 - 8]"
+      player_two_move = gets.chomp
+
+      if @position.index('X') != player_two_move.to_i && @position.index('O') != player_two_move.to_i
+        @position[player_two_move.to_i] = @@player_moves[1]
+        show_board
+      else
+        puts "invalid input...bad luck loser"
+      end
+      @columns1 = [@position[0], @position[3], @position[6]]
+      @columns2 = [@position[1], @position[4], @position[7]]
+      @columns3 = [@position[2], @position[5], @position[8]]
+
+      @rows1 = [@position[0], @position[1], @position[2]]
+      @rows2 = [@position[3], @position[4], @position[5]]
+      @rows3 = [@position[6], @position[7], @position[8]]
+
+      @diagonal = [@position[0], @position[4], @position[8]]
+      
+      if @rows1.all? {|pos| pos == @@player_moves[0]} || @rows2.all? {|pos| pos == @@player_moves[0]} || @rows3.all? {|pos| pos == @@player_moves[0]}
+
+        puts "\n#{@@players[0].upcase} won the game bro"
+        break
+      elsif @columns1.all? {|pos| pos == @@player_moves[0]} || @columns2.all? {|pos| pos == @@player_moves[0]} || @columns3.all? {|pos| pos == @@player_moves[0]}
+
+        puts "\n#{@@players[0].upcase} won the game bro"
+        break
+      elsif @diagonal.all? {|pos| pos == @@player_moves[0]}
+        puts "\n#{@@players[0].upcase} won the game bro"
+        break
+      end
+
+      if @rows1.all? {|pos| pos == @@player_moves[1]} || @rows2.all? {|pos| pos == @@player_moves[1]} || @rows3.all? {|pos| pos == @@player_moves[1]}
+
+        puts "\n#{@@players[1].upcase} won the game bro"
+        break
+      elsif @columns1.all? {|pos| pos == @@player_moves[1]} || @columns2.all? {|pos| pos == @@player_moves[1]} || @columns3.all? {|pos| pos == @@player_moves[1]}
+
+        puts "\n#{@@players[1].upcase} won the game bro"
+        break
+      elsif @diagonal.all? {|pos| pos == @@player_moves[1]}
+        puts "\n#{@@players[1].upcase} won the game bro"
+        break
+      end
+    end
+end
 end
 
 puts "Welcome to Tic-Tac-Toe"
