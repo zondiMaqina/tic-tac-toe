@@ -66,13 +66,15 @@ class Game < Players
   private
 
   def show_board
-    puts '---------------------'
-    puts " #{@position[0]} | #{@position[1]} | #{@position[2]}"
-    puts "---+---+---"
-    puts " #{@position[3]} | #{@position[4]} | #{@position[5]}"
-    puts "---+---+---"
-    puts " #{@position[6]} | #{@position[7]} | #{@position[8]}"
-    puts '---------------------'
+    board =  "\n---------------------\n"
+    board += "#{@position[0]} | #{@position[1]} | #{@position[2]}\n"
+    board += "---+---+---\n"
+    board += "#{@position[3]} | #{@position[4]} | #{@position[5]}\n"
+    board += "---+---+---\n"
+    board += "#{@position[6]} | #{@position[7]} | #{@position[8]}\n"
+    board += "---------------------\n"
+    print board
+    
   end
 
   def play_rounds
