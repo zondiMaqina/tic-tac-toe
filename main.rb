@@ -1,10 +1,15 @@
-class Players # class for orfanising plyers
+# class for orfanising plyers
+class Players
+    @@players = Array.new()
+    @@limit = 3
+    @@player_moves = Array.new()
   def initialize
     
   end
 end
 
-class Game < Players # class for playing game
+# class for playing game
+class Game < Players
   def initialize
     
   end
